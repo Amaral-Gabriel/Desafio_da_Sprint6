@@ -1,0 +1,246 @@
+:root {
+    --cor-azul-escuro: #1b357e;
+    --cor-azul-claro: #1351d8;
+}
+
+@font-face{
+    font-family: "Antenna";
+    src: url("assets/font/ford-antenna-regular-xcnd-589558121012a.woff");
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.material-icons-outlined {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    header > .cabecalho > img {
+        max-height: 50px;
+    }
+
+    #itens {display: none}
+
+    #menu_Burguer {display: none;}
+
+
+    #menu_Bar {
+
+        padding: 0;
+        margin: 0;
+        top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 5vw;
+    
+    }
+    #menu_Bar > a {
+        font-family: "Antenna", Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: var(--cor-azul-claro);
+        font-weight: bold;
+        font-size: 2vw;
+    }
+    .opcao {
+        color: #ffffff;
+        position: relative;
+        display: inline-block;
+    }
+      
+    .opcao::after,
+    .opcao::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, rgb(38, 86, 219), white );
+        bottom: -5px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s ease-out;
+    }
+      
+    .opcao::before {
+        top: -5px;
+        transform-origin: left;
+    }
+      
+    .opcao:hover::after,
+    .opcao:hover::before {
+        transform: scaleX(1);
+        
+    }
+
+
+    .imagem_Principal_Mobile {
+        display: none; 
+    }
+    .imagem_Principal_Desktop {
+        display: block; 
+    }
+
+    a > img {
+        width: 100%;
+        object-fit: cover; 
+    }
+
+    #titulo_Principal {
+        font-size: 7vw;
+        letter-spacing: 2px;
+        font-weight: 100;
+        line-height: 9vw;
+    }
+    #titulo_Forte {
+        font-size: 10vw;
+        line-height: 6vw;
+    }
+    #caixa_Informacao {
+        height: 20vw;
+        font-size: 3vw;
+    }
+
+    .carousel-container {
+        justify-self: center;
+        width: 90%;
+        
+    }
+   
+    
+    #prevButton, #nextButton {
+        display: flex;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+        margin: 0 20px;
+
+    }
+
+    .radios {
+       
+        bottom: 30px;
+
+    }
+
+
+    #carouselTitle{
+        font-size: x-large;
+    }
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #titulo_Principal {
+        font-size: 7vw;
+        letter-spacing: 1px;
+        line-height: 8vw;
+        margin-bottom: 10px;
+    }
+    #titulo_Forte {
+        font-size: 9vw;
+        line-height: 6vw;
+    }
+    #caixa_Informacao {
+        height: 20vw;
+        font-size: 2vw;
+    }
+    #novidade {
+        padding: 100px 50px;
+    }
+    #novidade > h1 {
+        font-size: 3rem;
+        
+    }
+    #carouselTitle{
+        font-size: xx-large;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    header > .cabecalho > img {
+        max-height: 60px;
+    }
+    #imagem_Principal {
+        width: 95%;
+    }
+    #caixa_Informacao {
+        justify-self: center;
+        width: 95%;
+    }
+    #titulo_Principal {
+        font-size: 5vw;
+        letter-spacing: 1px;
+        line-height: 7vw;
+    }
+    #titulo_Forte {
+        font-size: 9vw;
+    }
+    footer {
+        padding: 2vw;
+    }
+    .redes_Sociais {
+        margin-left: 0vw;
+    }
+    #caixa_Informacao {
+        height: 20vw;
+        font-size: 2vw;
+    }
+
+    .informacoes_Footer {
+        grid-template-columns: 300px auto 300px;
+        grid-template-rows: auto;
+        
+    }
+
+
+    .copy_Right {
+        grid-column-start: 2;    /* Começa na linha vertical 1 */
+        grid-column-end: 2;      /* Termina na linha vertical 3 */
+        grid-row-start: 1;       /* Começa na linha horizontal 2 */
+        grid-row-end: 1;  
+        font-size: large;
+    }
+
+    .copy_Right_Logo > img {
+        grid-column: 3;
+        justify-self: center;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+

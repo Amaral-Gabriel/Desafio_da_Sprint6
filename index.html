@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford Brasil</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="shortcut icon" href="assets/Favicon_Ford.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <img src="assets/imagens/logo-ford-256.png" alt="Logo da Ford com letras brancas e fundo azul">
+            <button id="menu_Burguer" class="material-icons-outlined" onclick="open_Burguer()">menu</button>
+        </div>  
+         
+        <nav id="itens">
+            <button href="javascript:void(0)" id="close_Burguer" class="material-icons-outlined" onclick="close_Burguer()">close</button>
+            <ul>
+                <li>
+                    <a href="index.html"><span class="material-icons-outlined">home</span> Home</a></li>
+                <li>
+                    <a href="lancamento.html"><span class="material-icons-outlined">directions_car</span> Lançamento</a></li>
+                <li>
+                    <a href="contato.html"><span class="material-icons-outlined">call</span> Contato</a></li>
+            </ul>
+        </nav>
+        <nav id="menu_Bar">
+            <a class="opcao" href="index.html">Home</a>
+            <a class="opcao" href="lancamento.html">Lançamento</a>
+            <a class="opcao" href="contato.html">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section id="conteudo_Principal">
+            <div class="carousel-container">
+                <div class="carousel-item">
+                    <!-- Imagem com botões dentro -->
+                    <div class="image-container">
+                        <a id="carouselLink" href="#" target="_blank">
+                            <img id="carouselImage" src="" alt="">
+                        </a>
+                        <div class="radios" id="radioButtonsContainer"></div>
+                    </div>
+                    
+                    <!-- Texto abaixo da imagem -->
+                    <h3 id="carouselTitle" class="carousel-text"></h3>
+                    
+                    <!-- Botões de navegação -->
+                    <div class="buttons">
+                        <button id="prevButton">&#9665;</button>
+                        <button id="nextButton">&#9655;</button>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+            
+        </section>
+        <section id="novidade">
+            <h1>Clique e conheça as novidades da Ford Ranger 2022</h1>
+            <button class="botao_Ranger"><a href="lancamento.html">Nova Ranger <span class="material-icons-outlined">keyboard_arrow_right</span></a></button>
+        </section>
+
+    </main>
+    <footer>
+        <div class="informacoes_Footer">
+            <div class="redes_Sociais">
+                <p>Redes Sociais</p>
+                <div class="logo_Redes">
+                    <a class="icone_Social" href="https://www.instagram.com/fordbrasil/" target="_blank"><img src="assets/imagens/instagram-logo-50.png" alt="Logo do Instagram"></a>
+                    <a class="icone_Social" href="https://www.facebook.com/ford/" target="_blank"><img src="assets/imagens/facebook-50.png" alt="Logo do Facebook"></a>
+                    <a class="icone_Social" href="https://www.youtube.com/@fordbrasil" target="_blank"><img src="assets/imagens/youtube-squared-50.png" alt="Logo do Youtube"></a>
+                </div>
+            </div>
+            <div class="copy_Right_Logo">
+                <img src="assets/imagens/ford-96.png" alt="Logo da Ford">
+            </div>
+            <div class="copy_Right">
+                <p>Copyright © 2025 Ford Motor Company - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/compare.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

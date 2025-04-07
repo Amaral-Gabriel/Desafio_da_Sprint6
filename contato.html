@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Ford</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/contato.css">
+    <link rel="shortcut icon" href="assets/Favicon_Ford.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <img src="assets/imagens/logo-ford-256.png" alt="Logo da Ford com letras brancas e fundo azul">
+            <button id="menu_Burguer" class="material-icons-outlined" onclick="open_Burguer()">menu</button>
+        </div>  
+         
+        <nav id="itens">
+            <button href="javascript:void(0)" id="close_Burguer" class="material-icons-outlined" onclick="close_Burguer()">close</button>
+            <ul>
+                <li>
+                    <a href="index.html"><span class="material-icons-outlined">home</span> Home</a></li>
+                <li>
+                    <a href="lancamento.html"><span class="material-icons-outlined">directions_car</span> Lançamento</a></li>
+                <li>
+                    <a href="contato.html"><span class="material-icons-outlined">call</span> Contato</a></li>
+            </ul>
+        </nav>
+        <nav id="menu_Bar">
+            <a class="opcao" href="index.html">Home</a>
+            <a class="opcao" href="lancamento.html">Lançamento</a>
+            <a class="opcao" href="contato.html">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <div id="conteudo_Principal">
+
+            <img src="assets/imagens/xls 2.2 diesel.jpg" alt="Ranger 2022 XLS na cor vermelha">
+            
+            
+            <form novalidate id="form" class="form" method="GET" action="">
+                
+                <p class="title">Contato</p>
+                <p class="message">Sobre você</p>
+                <span id="error_Forms"></span>
+                <div class="flex">
+                    <input required placeholder="PRIMEIRO NOME" type="text" class="input" name="nome" id="nome">
+                    <input required placeholder="ÚLTIMO NOME" type="text" class="input" name="sobrenome" id="sobrenome">
+                </div>
+                
+                <input required placeholder="EMAIL" type="email" class="input" name="email" id="email">
+                <input oninput="mascaraTelefone(this)" maxlength="16" required placeholder="TELEFONE" type="text" class="input" name="telefone" id="telefone">
+                
+                <select required class="input" name="tipo_contato" id="tipo_contato">
+                    <option value="" disabled selected>TIPO DE CONTATO</option>
+                    <option value="Elogio">ELOGIO</option>
+                    <option value="Reclamação">RECLAMAÇÃO</option>
+                    <option value="Solicitação">SOLICITAÇÃO</option>
+                </select>
+                
+                <textarea required class="input" name="mensagem" id="mensagem" cols="30" rows="10" placeholder="MENSAGEM"></textarea>
+
+                <div id="LGPD">
+                    <span class="text_LGPD">Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A qualquer momento, será possível editar ou remover tais dados. <a target="_blank" href="https://www.ford.com.br/politica-de-privacidade/">Termos e Condições</a></span>
+                    <div class="input_LGPD">
+                        <input type="checkbox" id="input_LGPD1">
+                        <span>Sim. Li e concordo com os Termos e Condições.</span>
+                    </div>
+                    <div class="input_LGPD">
+                        <input type="checkbox" id="input_LGPD2">
+                        <span>Sim. Também quero receber descontos e novidades.</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit">Enviar</button>
+
+            </form>
+
+            <div id="confirmacao">
+                <div class="text_Confirmation">
+                    <h1>Mensagem enviada com sucesso!</h1>
+                    <span>Olá, <strong class="confirmacao_Strong" id="strong_Name"></strong>! Agradecemos seu contato.<br><br> Sua mensagem foi recebida e nossa equipe está avaliando <span id="text_Tipo"></span>. Em breve, entraremos em contato. <br> <br> A <strong class="confirmacao_Strong">Ford</strong> valoriza sua opinião e está sempre à disposição!</span>
+
+                </div>
+                <div class="btn_Confirmation">
+                    <button class="botao_confirmacao"><a href="index.html">Voltar para página principal</a></button>
+                    <button onclick="closeConfirmation()" class="botao_confirmacao"><a href="">Enviar outra mensagem</a></button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="informacoes_Footer">
+            <div class="redes_Sociais">
+                <p>Redes Sociais</p>
+                <div class="logo_Redes">
+                    <a class="icone_Social" href="https://www.instagram.com/fordbrasil/" target="_blank"><img src="assets/imagens/instagram-logo-50.png" alt="Logo do Instagram"></a>
+                    <a class="icone_Social" href="https://www.facebook.com/ford/" target="_blank"><img src="assets/imagens/facebook-50.png" alt="Logo do Facebook"></a>
+                    <a class="icone_Social" href="https://www.youtube.com/@fordbrasil" target="_blank"><img src="assets/imagens/youtube-squared-50.png" alt="Logo do Youtube"></a>
+                </div>
+            </div>
+            <div class="copy_Right_Logo">
+                <img src="assets/imagens/ford-96.png" alt="Logo da Ford">
+            </div>
+            <div class="copy_Right">
+                <p>Copyright © 2025 Ford Motor Company - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>
