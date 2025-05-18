@@ -201,13 +201,6 @@ main {
     display: block;
 }
 
-.carousel-text {
-    text-align: center;
-    padding: 15px;
-    background: #ffffff;
-    margin: 0;
-}
-
 .radios {
     position: absolute;
     bottom: 10px;
@@ -251,7 +244,7 @@ main {
     position: absolute;
     top: 50%;
     left: 0;
-    right: 0;
+    
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
@@ -282,20 +275,6 @@ main {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #prevButton:hover, #nextButton:hover {
     background: rgba(0, 0, 0, 0.8);
     transform: scale(1.2);
@@ -308,7 +287,9 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-
+    background: #ffffff;
+    padding: 15px;
+    margin: 0;
 }
 
 a{
@@ -318,33 +299,9 @@ a{
     text-shadow: rgba(0, 0, 0, 0.233) -1px -1px 1px;
 }
 
-
-
 a > img {
     width: 100%;
     object-fit: cover; 
-}
-
-#titulo_Principal {
-    margin: 0;
-    position: absolute;
-    color: white;
-    font-size: 6vw;
-    align-self: flex-end;
-    text-align: center;
-    justify-self: end;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    letter-spacing: -1px;
-    font-weight: 100;
-    line-height: 10vw;
-    margin-bottom: 5px;
-    font-family: "Antenna", Arial, Helvetica, sans-serif;
-    
-}
-
-#titulo_Forte {
-    font-size: 13vw;
-    font-family: "Antenna", Arial, Helvetica, sans-serif;
 }
 
 #novidade {
@@ -353,13 +310,11 @@ a > img {
     justify-content: center;
     align-items: center;
     text-align: center;
-
     padding: 20px 10px;
 }
 
 #novidade > h1 {
     letter-spacing: 2px;
-    
 }
  
 

@@ -6,7 +6,7 @@ class Carousel {
         this.timer = null;
         this.radios = [];
 
-        // Elementos do DOM
+        
         this.imageElement = document.getElementById("carouselImage");
         this.titleElement = document.getElementById("carouselTitle");
         this.linkElement = document.getElementById("carouselLink");
@@ -87,14 +87,14 @@ class Carousel {
         this.linkElement.href = currentItem.url;
         this.linkElement.target = "_self";
         
-        // Atualizar apenas se houver radios
+        
         if (this.radios.length > 0) {
             this.radios.forEach(radio => radio.checked = false);
             this.radios[this.index].checked = true;
         }
     }
 
-    // Restante dos métodos permanece igual
+    
     next() {
         this.index = (this.index + 1) % this.images.length;
         this.updateCarousel();
@@ -135,7 +135,6 @@ const images = [
     }
 ];
 
-// Inicialização permanece igual
 document.addEventListener("DOMContentLoaded", () => {
     new Carousel(images);
 });
